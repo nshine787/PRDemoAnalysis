@@ -1,26 +1,23 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jun 18 17:01:38 2020
+Most of this code was written by WouterJansen from https://github.com/WouterJansen/PRDemoStatsParser this repo
 
+I have made some changes, mostly updating the code from Python 2 to Python 3.
+This file only parses one PRDemo file so I can test some things.
 @author: Nathan
 """
-import sys
 import struct
 import zlib
 import io
 import json
 import os, os.path
-import errno
 from collections import namedtuple
-from fnmatch import fnmatch
 import datetime
-import multiprocessing
-import requests
-import urllib
 import numpy as np
-import time
-from shutil import copyfile
-
+import sqlite3
+from datetime import datetime
+    
 def _json_object_hook(d): return namedtuple('X', d.keys())(*d.values())
 def json2obj(data): return json.loads(data, object_hook=_json_object_hook)
 # Helper function to return a null terminated string from pos in buffer
@@ -446,11 +443,40 @@ class demoParser:
 
     def runToEnd(self):
         while self.runTick():
-            
             pass
-test_dir = 'E:/PR/mods/pr_scraped_data/demos'
-os.chdir(test_dir)
+        
+# test_dir = 'E:/PR/mods/pr_scraped_data/demos'
+# os.chdir(test_dir)
 
-test_file = 'test.PRdemo'
-test = demoParser(test_file)
-print('done')            
+# test_file = 'test.PRdemo'
+# test = demoParser(test_file)
+
+# conn = sqlite3.connect(':memory:')
+# c = conn.cursor()
+# c.execute('''CREATE TABLE demos (
+#             date DATE,
+#             server TEXT,
+#             map TEXT,
+#             mode TEXT,
+#             layer TEXT,
+#             playerCount INT,
+#             ticketsTeam1 INT,
+#             ticketsTeam2 INT,
+#             version TEXT,
+#             duration INT
+#     )''')
+# conn.commit()
+# c.execute("INSERT INTO demos VALUES('2020-06-10 11:01:52', 'basrah',100,1,13,'3.1',1)")
+# conn.commit()
+# c.execute('SELECT * FROM demos')
+# print(c.fetchall())
+
+def insertDemo(d):
+    readableDate = datetime.fromtimestamp(d.date).strftime('%Y-%m-%d %H:%M:%S')
+    c.execute('''INSERT INTO demos VALUES(:date, :server, :map, :mode, :layer, :playerCount, 
+              :ticketsTeam1, :ticketsTeam2, :version, :duration)''', 
+    {'date':readableDate, 'server':d.serverName, 'map':d.mapName, 'mode':d.mapGamemode, 'layer':d.mapLayer, 'playerCount':d.playerCount, 'ticketsTeam1':d.ticket1, 'ticketsTeam2':d.ticket2,'version':d.version, 'duration':round(d.timePlayed/60,0)})
+
+# insertDemo(test)
+# c.execute('SELECT * FROM demos')
+# print(c.fetchall())
