@@ -31,7 +31,6 @@ def getString(stream):
             print('Error here')
         
         char = char.decode('utf-8')
-        # char = char.decode('ISO-8859-1')
         if char == '\0':
             return tmp
         tmp += str(char)
@@ -258,7 +257,6 @@ class demoParser:
         except:
             buffer = compressedBuffer
 
-        # self.stream = cStringIO.StringIO(buffer)
         self.stream = io.BytesIO(buffer)
         self.length = len(buffer)
 
@@ -444,39 +442,4 @@ class demoParser:
     def runToEnd(self):
         while self.runTick():
             pass
-        
-# test_dir = 'E:/PR/mods/pr_scraped_data/demos'
-# os.chdir(test_dir)
 
-# test_file = 'test.PRdemo'
-# test = demoParser(test_file)
-
-# conn = sqlite3.connect(':memory:')
-# c = conn.cursor()
-# c.execute('''CREATE TABLE demos (
-#             date DATE,
-#             server TEXT,
-#             map TEXT,
-#             mode TEXT,
-#             layer TEXT,
-#             playerCount INT,
-#             ticketsTeam1 INT,
-#             ticketsTeam2 INT,
-#             version TEXT,
-#             duration INT
-#     )''')
-# conn.commit()
-# c.execute("INSERT INTO demos VALUES('2020-06-10 11:01:52', 'basrah',100,1,13,'3.1',1)")
-# conn.commit()
-# c.execute('SELECT * FROM demos')
-# print(c.fetchall())
-
-def insertDemo(d):
-    readableDate = datetime.fromtimestamp(d.date).strftime('%Y-%m-%d %H:%M:%S')
-    c.execute('''INSERT INTO demos VALUES(:date, :server, :map, :mode, :layer, :playerCount, 
-              :ticketsTeam1, :ticketsTeam2, :version, :duration)''', 
-    {'date':readableDate, 'server':d.serverName, 'map':d.mapName, 'mode':d.mapGamemode, 'layer':d.mapLayer, 'playerCount':d.playerCount, 'ticketsTeam1':d.ticket1, 'ticketsTeam2':d.ticket2,'version':d.version, 'duration':round(d.timePlayed/60,0)})
-
-# insertDemo(test)
-# c.execute('SELECT * FROM demos')
-# print(c.fetchall())

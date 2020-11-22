@@ -1,0 +1,213 @@
+map,mode,layer,team1,team2
+albasrah_2,Insurgency,Alternative,Insurgents,BAF
+albasrah_2,Insurgency,Infantry,Insurgents,BAF
+albasrah_2,Insurgency,Standard,Insurgents,BAF
+asad_khal,Advance & Secure,Alternative,MEC,IDF
+asad_khal,Advance & Secure,Standard,Hamas,IDF
+assault_on_grozny,Advance & Secure,Alternative,Militia,Russia
+assault_on_grozny,Advance & Secure,Infantry,Militia,Russia
+assault_on_grozny,Advance & Secure,Standard,Militia,Russia
+assault_on_grozny,Insurgency,Standard,Militia,Russia
+assault_on_grozny,Skirmish,Alternative,Militia,Russia
+assault_on_mestia,Advance & Secure,Infantry,Militia,USMC
+assault_on_mestia,Advance & Secure,Standard,Militia,USMC
+bamyan,Advance & Secure,Alternative,Taliban,USMC
+bamyan,Advance & Secure,Large,Taliban,USMC
+bamyan,Advance & Secure,Standard,MEC,USMC
+bamyan,Insurgency,Standard,Taliban,USMC
+battle_of_ia_drang,Advance & Secure,Alternative,NVA,US Army Vietnam
+battle_of_ia_drang,Advance & Secure,Infantry,NVA,US Army Vietnam
+battle_of_ia_drang,Advance & Secure,Standard,NVA,US Army Vietnam
+beirut,Advance & Secure,Alternative,Russia,IDF
+beirut,Advance & Secure,Infantry,Russia,IDF
+beirut,Advance & Secure,Large,Russia,IDF
+beirut,Advance & Secure,Standard,Russia,IDF
+beirut,Skirmish,Infantry,Russia,IDF
+bijar_canyons,Advance & Secure,Alternative,MEC,IDF
+bijar_canyons,Advance & Secure,Standard,MEC,IDF
+bijar_canyons,Command & Control,Standard,MEC,IDF
+black_gold,Advance & Secure,Alternative,Russia,PLA
+black_gold,Advance & Secure,Infantry,Russia,PLA
+black_gold,Advance & Secure,Large,Russia,PLA
+black_gold,Advance & Secure,Standard,Russia,PLA
+black_gold,Command & Control,Standard,Russia,PLA
+black_gold,Insurgency,Standard,Militia,PLA
+black_gold,Vehicle Warfare,Infantry,Russia,PLA
+brecourt_assault,Advance & Secure,Alternative,Wermacht,US Army WWII
+brecourt_assault,Advance & Secure,Standard,Wermacht,US Army WWII
+burning_sands,Advance & Secure,Alternative,MEC,BAF
+burning_sands,Advance & Secure,Infantry,MEC,BAF
+burning_sands,Advance & Secure,Large,MEC,BAF
+burning_sands,Advance & Secure,Standard,MEC,BAF
+carentan,Advance & Secure,Alternative,Wermacht,US Army WWII
+carentan,Advance & Secure,Large,Wermacht,US Army WWII
+carentan,Advance & Secure,Standard,Wermacht,US Army WWII
+carentan,Skirmish,Alternative,Wermacht,US Army WWII
+carentan,Skirmish,Infantry,Wermacht,US Army WWII
+charlies_point,Advance & Secure,Standard,NVA,USMC Vietnam
+dovre,Advance & Secure,Alternative,Russia,Netherlands
+dovre,Advance & Secure,Infantry,Russia,Netherlands
+dovre,Advance & Secure,Standard,Russia,Netherlands
+dovre_winter,Advance & Secure,Alternative,Russia,Germany
+dovre_winter,Advance & Secure,Standard,Russia,Germany
+dragon_fly,Advance & Secure,Infantry,Militia,BAF
+dragon_fly,Advance & Secure,Standard,Militia,BAF
+dragon_fly,Insurgency,Standard,Militia,BAF
+fallujah_west,Advance & Secure,Standard,MEC,USMC
+fallujah_west,Insurgency,Alternative,Insurgents,USMC
+fallujah_west,Insurgency,Infantry,Insurgents,USMC
+fallujah_west,Insurgency,Standard,Insurgents,USMC
+fallujah_west,Skirmish,Infantry,MEC,USMC
+fools_road,Advance & Secure,Alternative,Militia,BAF
+fools_road,Advance & Secure,Infantry,Militia,BAF
+fools_road,Advance & Secure,Standard,Militia,BAF
+gaza_2,Advance & Secure,Alternative,MEC,IDF
+gaza_2,Advance & Secure,Infantry,Hamas,IDF
+gaza_2,Advance & Secure,Standard,Hamas,IDF
+gaza_2,Insurgency,Infantry,Hamas,IDF
+gaza_2,Insurgency,Standard,Hamas,IDF
+gaza_2,Skirmish,Infantry,Hamas,IDF
+goose_green,Advance & Secure,Alternative,Argentina,BAF 1982
+goose_green,Advance & Secure,Infantry,Argentina,BAF 1982
+goose_green,Advance & Secure,Standard,Argentina,BAF 1982
+hades_peak,Advance & Secure,Alternative,Russia,BAF
+hades_peak,Advance & Secure,Standard,Russia,BAF
+hill_488,Advance & Secure,Infantry,NVA,US Army Vietnam
+hill_488,Advance & Secure,Standard,NVA,US Army Vietnam
+iron_ridge,Advance & Secure,Alternative,Militia,Poland
+iron_ridge,Advance & Secure,Standard,Russia,Poland
+iron_ridge,Insurgency,Standard,Militia,Poland
+iron_thunder,Advance & Secure,Alternative,Russia,Poland
+iron_thunder,Advance & Secure,Standard,Russia,Poland
+jabal,Advance & Secure,Alternative,FSA,USMC
+jabal,Advance & Secure,Standard,MEC,USMC
+kafar_halab,Advance & Secure,Alternative,MEC,Russia
+kafar_halab,Advance & Secure,Standard,FSA,Russia
+kafar_halab,Insurgency,Standard,FSA,Russia
+karbala,Insurgency,Alternative,Insurgents,Poland
+karbala,Insurgency,Infantry,Insurgents,Poland
+karbala,Insurgency,Large,Insurgents,Poland
+karbala,Insurgency,Standard,Insurgents,Poland
+kashan_desert,Advance & Secure,Alternative,MEC,Canada
+kashan_desert,Advance & Secure,Large,MEC,USMC
+kashan_desert,Advance & Secure,Standard,MEC,US Army
+kashan_desert,Command & Control,Infantry,MEC,Canada
+khamisiyah,Advance & Secure,Alternative,MEC,US Army
+khamisiyah,Advance & Secure,Infantry,MEC,US Army
+khamisiyah,Advance & Secure,Large,MEC,US Army
+khamisiyah,Advance & Secure,Standard,MEC,USMC
+khamisiyah,Command & Control,Alternative,MEC,US Army
+khamisiyah,Command & Control,Standard,MEC,USMC
+khamisiyah,Insurgency,Standard,MEC,US Army
+kokan,Insurgency,Alternative,Taliban,Canada
+kokan,Insurgency,Infantry,Taliban,USMC
+kokan,Insurgency,Standard,Taliban,US Army
+korengal,Advance & Secure,Standard,Taliban,US Army
+korengal,Insurgency,Standard,Taliban,US Army
+kozelsk,Advance & Secure,Alternative,Militia,Russia
+kozelsk,Advance & Secure,Standard,Militia,Russia
+kozelsk,Insurgency,Standard,Militia,Russia
+lashkar_valley,Insurgency,Infantry,Taliban,Germany
+lashkar_valley,Insurgency,Standard,Taliban,Germany
+masirah,Advance & Secure,Standard,MEC,France
+merville,Advance & Secure,Alternative,Wermacht,US Army WWII
+merville,Advance & Secure,Standard,Wermacht,US Army WWII
+musa_qala,Advance & Secure,Standard,Taliban,BAF
+musa_qala,Insurgency,Alternative,Taliban,USMC
+musa_qala,Insurgency,Infantry,Taliban,BAF
+musa_qala,Insurgency,Standard,Taliban,BAF
+muttrah_city_2,Advance & Secure,Alternative,MEC,USMC
+muttrah_city_2,Advance & Secure,Infantry,MEC,USMC
+muttrah_city_2,Advance & Secure,Standard,MEC,USMC
+muttrah_city_2,Skirmish,Infantry,MEC,USMC
+nuijamaa,Advance & Secure,Alternative,Russia,France
+nuijamaa,Advance & Secure,Standard,Russia,France
+nuijamaa,Skirmish,Infantry,Russia,France
+omaha_beach,Advance & Secure,Alternative,Wermacht,US Army WWII
+omaha_beach,Advance & Secure,Infantry,Wermacht,US Army WWII
+omaha_beach,Advance & Secure,Large,Wermacht,US Army WWII
+omaha_beach,Advance & Secure,Standard,Wermacht,US Army WWII
+omaha_beach,Skirmish,Infantry,Wermacht,US Army WWII
+op_barracuda,Advance & Secure,Alternative,NVA,USMC Vietnam
+op_barracuda,Advance & Secure,Standard,PLA,USMC
+operation_archer,Insurgency,Alternative,Taliban,USMC
+operation_archer,Insurgency,Infantry,Taliban,Canada
+operation_archer,Insurgency,Standard,Taliban,Canada
+operation_falcon,Advance & Secure,Alternative,Militia,Netherlands
+operation_falcon,Advance & Secure,Infantry,Russia,Netherlands
+operation_falcon,Advance & Secure,Large,Russia,Netherlands
+operation_falcon,Advance & Secure,Standard,Russia,Netherlands
+operation_ghost_train,Advance & Secure,Standard,PLA,BAF
+operation_ghost_train,Skirmish,Infantry,PLA,BAF
+operation_marlin,Advance & Secure,Alternative,MEC,France
+operation_marlin,Advance & Secure,Infantry,Hamas,France
+operation_marlin,Advance & Secure,Standard,MEC,France
+operation_marlin,Insurgency,Standard,Hamas,France
+operation_soul_rebel,Advance & Secure,Infantry,Russia,BAF
+operation_soul_rebel,Advance & Secure,Standard,Russia,BAF
+operation_soul_rebel,Vehicle Warfare,Standard,Russia,BAF
+outpost,Advance & Secure,Alternative,Taliban,Poland
+outpost,Advance & Secure,Standard,MEC,Poland
+outpost,Insurgency,Standard,Taliban,Poland
+pavlovsk_bay,Advance & Secure,Alternative,Militia,USMC
+pavlovsk_bay,Advance & Secure,Standard,Russia,USMC
+qwai1,Advance & Secure,Alternative,PLA,Canada
+qwai1,Advance & Secure,Infantry,PLA,US Army
+qwai1,Advance & Secure,Standard,PLA,US Army
+ramiel,Advance & Secure,Standard,ARF,US Army
+ramiel,Insurgency,Alternative,ARF,USMC
+ramiel,Insurgency,Infantry,ARF,US Army
+ramiel,Insurgency,Standard,ARF,US Army
+ramiel,Skirmish,Infantry,ARF,US Army
+ras_el_masri_2,Advance & Secure,Standard,IDF,PLA
+ras_el_masri_2,Insurgency,Standard,Hamas,PLA
+reichswald,Advance & Secure,Alternative,Wermacht,US Army WWII
+reichswald,Advance & Secure,Infantry,Wermacht,US Army WWII
+reichswald,Advance & Secure,Standard,Wermacht,US Army WWII
+route,Advance & Secure,Infantry,Russia,Netherlands
+route,Advance & Secure,Standard,Russia,Netherlands
+saaremaa,Advance & Secure,Alternative,Russia,USMC
+saaremaa,Advance & Secure,Large,Russia,USMC
+saaremaa,Advance & Secure,Standard,Russia,USMC
+sahel,Advance & Secure,Alternative,ARF,France
+sahel,Advance & Secure,Infantry,ARF,France
+sahel,Advance & Secure,Standard,ARF,France
+sahel,Insurgency,Standard,ARF,France
+sbeneh_outskirts,Advance & Secure,Alternative,FSA,MEC
+sbeneh_outskirts,Advance & Secure,Standard,FSA,MEC
+sbeneh_outskirts,Command & Control,Standard,FSA,MEC
+sbeneh_outskirts,Insurgency,Alternative,FSA,MEC
+sbeneh_outskirts,Insurgency,Standard,FSA,MEC
+sbeneh_outskirts,Skirmish,Infantry,FSA,MEC
+shahadah,Advance & Secure,Standard,MEC,Poland
+shahadah,Insurgency,Standard,Insurgents,Poland
+shijiavalley,Advance & Secure,Alternative,PLA,BAF
+shijiavalley,Advance & Secure,Infantry,PLA,BAF
+shijiavalley,Advance & Secure,Standard,PLA,BAF
+shijiavalley,Skirmish,Infantry,PLA,BAF
+silent_eagle,Advance & Secure,Alternative,Russia,Germany
+silent_eagle,Advance & Secure,Large,Russia,Germany
+silent_eagle,Advance & Secure,Standard,Russia,Germany
+tad_sae,Advance & Secure,Alternative,NVA,US Army Vietnam
+tad_sae,Advance & Secure,Standard,PLA,USMC
+the_falklands,Advance & Secure,Alternative,Argentina,BAF 1982
+the_falklands,Advance & Secure,Infantry,Argentina,BAF 1982
+the_falklands,Advance & Secure,Standard,Argentina,BAF 1982
+the_falklands,Vehicle Warfare,Alternative,Argentina,BAF 1982
+the_falklands,Vehicle Warfare,Standard,Argentina,BAF 1982
+ulyanovsk,Advance & Secure,Alternative,Militia,Germany
+ulyanovsk,Advance & Secure,Infantry,Russia,Germany
+ulyanovsk,Advance & Secure,Large,Russia,Germany
+ulyanovsk,Advance & Secure,Standard,Russia,Germany
+vadso_city,Advance & Secure,Alternative,Russia,BAF
+vadso_city,Advance & Secure,Standard,Russia,BAF
+vadso_city,Skirmish,Infantry,Russia,BAF
+wanda_shan,Advance & Secure,Alternative,PLA,Germany
+wanda_shan,Advance & Secure,Standard,PLA,Germany
+wanda_shan,Command & Control,Standard,PLA,Germany
+xiangshan,Advance & Secure,Alternative,PLA,France
+xiangshan,Advance & Secure,Standard,PLA,France
+yamalia,Advance & Secure,Alternative,Russia,US Army
+yamalia,Advance & Secure,Infantry,Russia,Canada
+yamalia,Advance & Secure,Standard,Russia,Canada
+yamalia,Command & Control,Infantry,Russia,Canada
