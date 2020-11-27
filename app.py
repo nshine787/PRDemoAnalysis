@@ -18,11 +18,18 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 df = clean_up.explore('pr.db').df
 
-unformattedMapNames = np.sort(df.loc[df['mode'] == 'Advance & Secure', 'map'].unique())
+unformattedMapNames = np.sort(df['map'].unique())
 formattedMapNames = [clean_up.formatMapName(mapName) for mapName in unformattedMapNames]
+
 mapOptions = []
 for i in range(len(unformattedMapNames)):
     mapOptions.append(dict(label = formattedMapNames[i], value = unformattedMapNames[i]))
+
+allMapModes = {name : df.loc[df['map'] == name,'mode'].unique()  for name in unformattedMapNames}
+allLayers = {}
+for mapName, mapModes in allMapModes.items():
+    for mapMode in mapModes:
+        allLayers[(mapName,mapMode)] = df.loc[(df['map'] == mapName) & (df['mode'] == mapMode),'layer'].unique()
 
 app.layout = html.Div([
     dcc.Graph(id='top-maps'),
@@ -40,7 +47,14 @@ app.layout = html.Div([
         value='muttrah_city_2',
         clearable=False
     ),
-    html.Hr()
+    dcc.Dropdown(
+        id='describe-dropdown-mode',
+        value = 'Advance & Secure'
+        ),
+    dcc.Dropdown(
+        id='describe-dropdown-layer',
+        value = 'Standard'
+        )
 ])
 
 @app.callback(
@@ -63,25 +77,61 @@ def updateTopMaps(value):
         go.Bar(name='opfor', x=labels, y=opforWins, marker_color='red'),
         go.Bar(name='blufor', x=labels, y=bluforWins, marker_color='blue')
     ])
-    titleText = f'Top {value} Played PR Maps'
+    titleText = f'Top {value} Played PR Maps (1.6.x)'
     fig.update_layout(title_text = titleText, barmode='stack')
     return fig
 
 @app.callback(
-    Output(component_id='describe-map', component_property='figure'),
+    Output(component_id='describe-dropdown-mode', component_property='options'),
     Input(component_id='describe-dropdown', component_property='value')
 )
-def updateDescribeMap(mapName):
+def updateModeDropdown(mapName):
+    modes = df.loc[df['map'] == mapName,'mode'].unique()
+    modesList = [{'label': k, 'value': k} for k in modes]
+    return modesList
+
+@app.callback(
+    Output(component_id='describe-dropdown-mode',
+            component_property='value'),
+    Input(component_id='describe-dropdown-mode', component_property='options')
+    )
+def setModeValue(modeChosen):
+    return modeChosen[0]['value']
+
+@app.callback(
+    Output(component_id='describe-dropdown-layer', component_property='options'),
+    Input(component_id='describe-dropdown', component_property='value'),
+    Input(component_id='describe-dropdown-mode', component_property='value')
+)
+def updateLayerDropdown(mapName,modeName):
+    layers = df.loc[(df['map'] == mapName) & (df['mode'] == modeName),'layer'].unique()
+    return [{'label': k, 'value': k} for k in layers]
+
+@app.callback(
+    Output(component_id='describe-dropdown-layer',
+            component_property='value'),
+    Input(component_id='describe-dropdown-layer', component_property='options')
+    )
+def setLayerValue(layerChosen):
+    return 'Standard'
+
+@app.callback(
+    Output(component_id='describe-map', component_property='figure'),
+    Input(component_id = 'describe-dropdown', component_property='value'),
+    Input(component_id='describe-dropdown-mode', component_property='value'),
+    Input(component_id='describe-dropdown-layer', component_property='value')
+)
+def updateDescribeMap(mapName, mode, layer):
     cols = plotly.colors.DEFAULT_PLOTLY_COLORS
     fig = make_subplots(rows=1, cols=4,
                         subplot_titles=('Match Length (min)','Remaining Tickets of the Winner','Player Count',''))
-    mode = 'Advance & Secure'
-    layer = 'Standard'
     testdf = df.loc[(df['map'] == mapName) & 
                         (df['mode'] == mode) & 
                         (df['layer'] == layer), ['playerCount','winningTeam','duration','winningTeamName', 'winningTickets']]
     team1Wins = testdf.loc[testdf['winningTeam']==1]
     team2Wins = testdf.loc[testdf['winningTeam']==2]
+    
+    trace0, trace1, trace2, trace3, trace4, trace5 = go.Box(),go.Box(),go.Box(),go.Box(),go.Box(),go.Box()
     
     team2HasWins = True
     if len(team2Wins) > 0:
