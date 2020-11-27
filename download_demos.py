@@ -46,7 +46,6 @@ class Server:
         tags = soup.find_all('a', text=re.compile(self.searchTerm))
         user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
         demosToDownload = []
-        # findFileName = re.compile('tracker_.+PRdemo$')
         findFileName = re.compile('tracker_\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}.+PRdemo$')
         findDate = re.compile('\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}')
         lastDemoDate = self.getLatestDemo()
@@ -69,14 +68,19 @@ class Server:
                     except urllib.request.HTTPError as e:
                         print(e)
                         break
-                    
-Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
-Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
-Server('PRTA', 'https://eu3.prta.co/servers/prbf2/1/tracker/','https://eu3.prta.co/servers/prbf2/1/tracker/')
-Server('DIVSUL', 'http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/','http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/', 'tracker_')
-Server('=HOG=', 'http://br.hogclangaming.com/pr1/','http://br.hogclangaming.com/pr1/','tracker_',1)
-Server('SSG', 'http://br.ssg-clan.com/?srv=1','http://br.ssg-clan.com/tracker/', 'Tracker')
 
+def main():
+    Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
+    Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
+    Server('PRTA', 'https://eu3.prta.co/servers/prbf2/1/tracker/','https://eu3.prta.co/servers/prbf2/1/tracker/')
+    Server('DIVSUL', 'http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/','http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/', 'tracker_')
+    Server('=HOG=', 'http://br.hogclangaming.com/pr1/','http://br.hogclangaming.com/pr1/','tracker_',1)
+    Server('SSG', 'http://br.ssg-clan.com/?srv=1','http://br.ssg-clan.com/tracker/', 'Tracker')
+
+if __name__ == '__main__':
+    main()
+
+# TO-DO: find a way to scrape demos from the below links
 # ru = Server('Russian', 'C:/Users/Nathan/Downloads/RussianReality.html','http://www.realitymod.ru/tracker/records/download.php?file=')
 # sf = Server('=SF=', 'http://18.229.154.12/tracker/','http://18.229.154.12/tracker/','^ tracker_.*')       
 # csa -- 'http://csapr.duckdns.org/tracker/'

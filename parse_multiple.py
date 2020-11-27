@@ -43,6 +43,9 @@ class StatsParser:
                 results = parsedDemos.get()
             except Exception as e:
                 print(e)
+                
+        for demoLocation in demoLocations: os.remove(demoLocation) 
+              
         finish = time.time()
         print(f' Finished parsing in {round((finish-start),2)} second(s)')
         return results 
@@ -79,6 +82,7 @@ def main():
                 numRowsInserted += 1
             except sqlite3.IntegrityError:
                 duplicateRows +=1
+                
     print(f'Demos inserted: {numRowsInserted}')
     
     conn.commit()

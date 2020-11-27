@@ -1,4 +1,4 @@
-map,mode,layer,team1,team2,tickets1,tickets2
+map,mode,layer,team1,team2,startingTickets1,startingTickets2
 albasrah_2,Insurgency,Alternative,Insurgents,BAF,4,650
 albasrah_2,Insurgency,Infantry,Insurgents,BAF,4,650
 albasrah_2,Insurgency,Standard,Insurgents,BAF,4,650
