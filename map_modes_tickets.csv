@@ -19,9 +19,9 @@ battle_of_ia_drang,Advance & Secure,Alternative,NVA,US Army Vietnam,550,550
 battle_of_ia_drang,Advance & Secure,Infantry,NVA,US Army Vietnam,550,550
 battle_of_ia_drang,Advance & Secure,Standard,NVA,US Army Vietnam,550,550
 battle_of_ia_drang,Command & Control,Standard,NVA,US Army Vietnam,550,550
-beirut,Advance & Secure,Alternative,Russia,IDF,,
+beirut,Advance & Secure,Alternative,Russia,IDF,750,750
 beirut,Advance & Secure,Infantry,Russia,IDF,550,550
-beirut,Advance & Secure,Large,Russia,IDF,,
+beirut,Advance & Secure,Large,Russia,IDF,1000,1000
 beirut,Advance & Secure,Standard,Russia,IDF,700,700
 beirut,Skirmish,Infantry,Russia,IDF,550,550
 bijar_canyons,Advance & Secure,Alternative,MEC,IDF,650,650
@@ -42,7 +42,7 @@ brecourt_assault,Advance & Secure,Alternative,Wermacht,US Army WWII,700,700
 brecourt_assault,Advance & Secure,Standard,Wermacht,US Army WWII,700,700
 burning_sands,Advance & Secure,Alternative,MEC,BAF,600,600
 burning_sands,Advance & Secure,Infantry,MEC,BAF,500,500
-burning_sands,Advance & Secure,Large,MEC,BAF,,
+burning_sands,Advance & Secure,Large,MEC,BAF,1000,1000
 burning_sands,Advance & Secure,Standard,MEC,BAF,750,750
 carentan,Advance & Secure,Alternative,Wermacht,US Army WWII,900,800
 carentan,Advance & Secure,Large,Wermacht,US Army WWII,900,900
@@ -80,7 +80,7 @@ goose_green,Advance & Secure,Standard,Argentina,BAF 1982,500,550
 hades_peak,Advance & Secure,Alternative,Russia,BAF,650,650
 hades_peak,Advance & Secure,Standard,Russia,BAF,650,650
 hades_peak,Advance & Secure,Infantry,Russia,BAF,450,450
-hill_488,Advance & Secure,Infantry,NVA,US Army Vietnam,,
+hill_488,Advance & Secure,Infantry,NVA,US Army Vietnam,350,400
 hill_488,Advance & Secure,Standard,NVA,US Army Vietnam,600,600
 iron_ridge,Advance & Secure,Alternative,Militia,Poland,550,500
 iron_ridge,Advance & Secure,Infantry,Russia,Poland,400,400
@@ -180,7 +180,7 @@ ras_el_masri_2,Insurgency,Standard,Hamas,PLA,600,600
 reichswald,Advance & Secure,Alternative,Wermacht,US Army WWII,750,800
 reichswald,Advance & Secure,Infantry,Wermacht,US Army WWII,700,750
 reichswald,Advance & Secure,Standard,Wermacht,US Army WWII,850,850
-route,Advance & Secure,Infantry,Russia,Netherlands,,
+route,Advance & Secure,Infantry,Russia,Netherlands,600,600
 route,Advance & Secure,Standard,Russia,Netherlands,600,600
 saaremaa,Advance & Secure,Alternative,Russia,USMC,600,600
 saaremaa,Advance & Secure,Infantry,Russia,USMC,400,400
@@ -206,7 +206,7 @@ shijiavalley,Advance & Secure,Standard,PLA,BAF,650,650
 shijiavalley,Skirmish,Infantry,PLA,BAF,,
 silent_eagle,Advance & Secure,Alternative,Russia,Germany,600,600
 silent_eagle,Advance & Secure,Infantry,Russia,Germany,500,500
-silent_eagle,Advance & Secure,Large,Russia,Germany,,
+silent_eagle,Advance & Secure,Large,Russia,Germany,900,900
 silent_eagle,Advance & Secure,Standard,Russia,Germany,600,600
 tad_sae,Advance & Secure,Alternative,NVA,US Army Vietnam,500,500
 tad_sae,Advance & Secure,Infantry,PLA,USMC,500,500
@@ -218,7 +218,7 @@ the_falklands,Vehicle Warfare,Alternative,Argentina,BAF 1982,1000,1000
 the_falklands,Vehicle Warfare,Standard,Argentina,BAF 1982,1000,1000
 ulyanovsk,Advance & Secure,Alternative,Militia,Germany,600,600
 ulyanovsk,Advance & Secure,Infantry,Russia,Germany,500,450
-ulyanovsk,Advance & Secure,Large,Russia,Germany,,
+ulyanovsk,Advance & Secure,Large,Russia,Germany,900,900
 ulyanovsk,Advance & Secure,Standard,Russia,Germany,600,600
 vadso_city,Advance & Secure,Alternative,Russia,BAF,600,600
 vadso_city,Advance & Secure,Standard,Russia,BAF,600,600

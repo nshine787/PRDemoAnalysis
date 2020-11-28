@@ -76,9 +76,10 @@ class explore:
         }
         df.replace({'layer':layerNames},inplace=True)
         df = pd.merge(df,mapTeams, how='left',left_on=['map','mode','layer'],right_on=['map','mode','layer'])
-        df = df.loc[(df['version'] != 'v1.5.5') & 
-                (df['mode'].isin(['Advance & Secure','Insurgency']))
-               ]
+        # df = df.loc[(df['version'] != 'v1.5.5') & 
+        #         (df['mode'].isin(['Advance & Secure','Insurgency']))
+        #        ]
+        df = df.loc[(df['mode'].isin(['Advance & Secure','Insurgency']))               ]
         df.loc[df['server'].str.startswith('PRTA.co'), 'server'] = 'PRTA.co'
         df.loc[df['server'].str.startswith('Gamma Group'), 'server'] = 'Gamma Group'
         df.loc[df['server'].str.startswith('[DIVSUL'), 'server'] = 'DIVSUL'

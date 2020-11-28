@@ -16,20 +16,15 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
-df = clean_up.explore('pr.db').df
-
+all_df = clean_up.explore('pr.db').df
+df = all_df
 unformattedMapNames = np.sort(df['map'].unique())
 formattedMapNames = [clean_up.formatMapName(mapName) for mapName in unformattedMapNames]
 
+versionOptions = [{'label':version,'value':version}for version in np.sort(all_df['version'].unique())]
 mapOptions = []
 for i in range(len(unformattedMapNames)):
     mapOptions.append(dict(label = formattedMapNames[i], value = unformattedMapNames[i]))
-
-allMapModes = {name : df.loc[df['map'] == name,'mode'].unique()  for name in unformattedMapNames}
-allLayers = {}
-for mapName, mapModes in allMapModes.items():
-    for mapMode in mapModes:
-        allLayers[(mapName,mapMode)] = df.loc[(df['map'] == mapName) & (df['mode'] == mapMode),'layer'].unique()
 
 app.layout = html.Div([
     dcc.Graph(id='top-maps'),
@@ -40,6 +35,11 @@ app.layout = html.Div([
         value=10,
         step=1
     ),
+    dcc.Checklist(id='version-chklst',
+              options = versionOptions,
+              value = [version['value'] for version in versionOptions],
+              labelStyle = {'display': 'inline-block'}
+              ),
     dcc.Graph(id='describe-map'),
     dcc.Dropdown(
         id='describe-dropdown',
@@ -59,17 +59,18 @@ app.layout = html.Div([
 
 @app.callback(
     Output(component_id='top-maps', component_property='figure'),
-    Input(component_id='top-slider', component_property='value')
+    Input(component_id='top-slider', component_property='value'),
+    Input(component_id='version-chklst', component_property='value')
 )
-def updateTopMaps(value):
-    N = value
-    topMaps = df.groupby(['map','mode','layer']).count()['date'].sort_values(ascending=False).iloc[:N].index.values
+def updateTopMaps(N, version):
+    dfVersions = df.loc[df['version'].isin(version)]
+    topMaps = dfVersions.groupby(['map','mode','layer']).count()['date'].sort_values(ascending=False).iloc[:N].index.values
     
     labels = clean_up.shortAll(topMaps)
     opforWins = []
     bluforWins = []
     for i in range(N):
-        validRounds = df.loc[df[['map','mode','layer']].isin(topMaps[i]).all(axis=1)]
+        validRounds = dfVersions.loc[dfVersions[['map','mode','layer']].isin(topMaps[i]).all(axis=1)]
         opforWins.append(sum(validRounds['winningTeam'] == 1))
         bluforWins.append(sum(validRounds['winningTeam'] == 2))
         
@@ -77,16 +78,25 @@ def updateTopMaps(value):
         go.Bar(name='opfor', x=labels, y=opforWins, marker_color='red'),
         go.Bar(name='blufor', x=labels, y=bluforWins, marker_color='blue')
     ])
-    titleText = f'Top {value} Played PR Maps (1.6.x)'
+    titleText = f'Top {N} Played PR Maps'
     fig.update_layout(title_text = titleText, barmode='stack')
     return fig
 
 @app.callback(
+    Output(component_id='describe-dropdown', component_property='options'),
+    Input(component_id='version-chklst', component_property='value'))
+def updateMaps(versionList):
+    dfVersions = df.loc[df['version'].isin(versionList)]
+    return [{'label':clean_up.formatMapName(mapName), 'value':mapName} for mapName in np.sort(dfVersions['map'].unique())]
+
+@app.callback(
     Output(component_id='describe-dropdown-mode', component_property='options'),
-    Input(component_id='describe-dropdown', component_property='value')
+    Input(component_id='describe-dropdown', component_property='value'),
+    Input(component_id='version-chklst', component_property='value')
 )
-def updateModeDropdown(mapName):
-    modes = df.loc[df['map'] == mapName,'mode'].unique()
+def updateModeDropdown(mapName, versionList):
+    dfVersions = df.loc[df['version'].isin(versionList)]
+    modes = dfVersions.loc[dfVersions['map'] == mapName,'mode'].unique()
     modesList = [{'label': k, 'value': k} for k in modes]
     return modesList
 
@@ -101,10 +111,13 @@ def setModeValue(modeChosen):
 @app.callback(
     Output(component_id='describe-dropdown-layer', component_property='options'),
     Input(component_id='describe-dropdown', component_property='value'),
-    Input(component_id='describe-dropdown-mode', component_property='value')
+    Input(component_id='describe-dropdown-mode', component_property='value'),
+    Input(component_id='version-chklst', component_property='value')
 )
-def updateLayerDropdown(mapName,modeName):
-    layers = df.loc[(df['map'] == mapName) & (df['mode'] == modeName),'layer'].unique()
+def updateLayerDropdown(mapName,modeName, versionList):
+    dfVersions = df.loc[df['version'].isin(versionList)]
+    layers = dfVersions.loc[(dfVersions['map'] == mapName) & 
+                            (dfVersions['mode'] == modeName),'layer'].unique()
     return [{'label': k, 'value': k} for k in layers]
 
 @app.callback(
@@ -119,15 +132,17 @@ def setLayerValue(layerChosen):
     Output(component_id='describe-map', component_property='figure'),
     Input(component_id = 'describe-dropdown', component_property='value'),
     Input(component_id='describe-dropdown-mode', component_property='value'),
-    Input(component_id='describe-dropdown-layer', component_property='value')
+    Input(component_id='describe-dropdown-layer', component_property='value'),
+    Input(component_id='version-chklst', component_property='value')
 )
-def updateDescribeMap(mapName, mode, layer):
+def updateDescribeMap(mapName, mode, layer, versionList):
     cols = plotly.colors.DEFAULT_PLOTLY_COLORS
     fig = make_subplots(rows=1, cols=4,
                         subplot_titles=('Match Length (min)','Remaining Tickets of the Winner','Player Count',''))
     testdf = df.loc[(df['map'] == mapName) & 
                         (df['mode'] == mode) & 
-                        (df['layer'] == layer), ['playerCount','winningTeam','duration','winningTeamName', 'winningTickets']]
+                        (df['layer'] == layer) &
+                        (df['version'].isin(versionList)), ['playerCount','winningTeam','duration','winningTeamName', 'winningTickets']]
     team1Wins = testdf.loc[testdf['winningTeam']==1]
     team2Wins = testdf.loc[testdf['winningTeam']==2]
     
@@ -164,8 +179,11 @@ def updateDescribeMap(mapName, mode, layer):
     winningTeamCounts = pd.value_counts(testdf['winningTeamName'].values, sort=True)
     if sum(testdf['winningTeam'] == 1) > sum(testdf['winningTeam'] == 2):
         winningTeamCounts = winningTeamCounts[::-1]
+    markerColors = [cols[0],cols[3]]
+    if sum(testdf['winningTeam'] == 2) == 0:
+        markerColors = [cols[3]]
     trace6 = go.Bar(x=winningTeamCounts.index, y=winningTeamCounts.values,
-                    marker_color=[cols[0],cols[3]],
+                    marker_color=markerColors,
                     showlegend=False)
     if team2HasWins:
         fig.add_trace(trace0,row=1,col=1)
