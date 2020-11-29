@@ -3,6 +3,8 @@
 Created on Sat Nov 14 01:34:10 2020
 
 @author: Nathan
+
+Note: There is considerable hang-time when connecting to the FCV servers, but it will connect eventually'
 """
 
 import requests
@@ -13,6 +15,25 @@ import regex as re
 import datetime
 import sqlite3
 import time
+import sys
+
+def update_progress(currentCount,totalCount):
+    barLength = 20
+    progress = float(currentCount) / totalCount
+    if isinstance(progress, int):
+        progress = float(progress)
+    if not isinstance(progress, float):
+        progress = 0
+        status = "error: progress var must be float\r\n"
+    if progress < 0:
+        progress = 0
+        status = "Halt...\r\n"
+    if progress >= 1:
+        progress = 1
+    block = int(round(barLength*progress))
+    text = "\r[{0}] {1}% {2}".format( "#"*block + "-"*(barLength-block), round(progress*100,2), " (" + str(currentCount) + "/" + str(totalCount) + ")")
+    sys.stdout.write(text)
+    sys.stdout.flush()
 
 class Server:
     def __init__(self, name, linkUrl, trackerUrl, searchTerm='',waitTime=0, db_location = 'pr.db'):
@@ -64,43 +85,48 @@ class Server:
         soup = BeautifulSoup(req.content, 'html.parser')
         tags = soup.find_all('a', text=re.compile(self.searchTerm))
         user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-        demosToDownload = []
         findFileName = re.compile('tracker_\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}.+PRdemo$')
         findDate = re.compile('\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}')
         lastDemoDate = self.getLatestDemo()
         newDateToUpdate = '2000-01-01 00:00:00'
+        demosToDownload = []
         for tagIndex,tag in enumerate(tags):
             filename = re.search(findFileName, tag['href']).group(0)
-            if filename not in demosToDownload:
-                fileDate = re.search(findDate, filename).group(0)
-                fileDateFormatted = datetime.datetime.strptime(fileDate, '%Y_%m_%d_%H_%M_%S').strftime('%Y-%m-%d %H:%M:%S')
-                if fileDateFormatted > lastDemoDate:
-                    if fileDateFormatted > newDateToUpdate:
-                        newDateToUpdate = fileDateFormatted
-                    self.updateLatestDemo(fileDateFormatted)
-                    demosToDownload.append(filename)
-                    demoDestFileName = str("demos/" + filename)
-                    demoUrl = str(self.trackerUrl + filename)
-                    try:
-                        time.sleep(self.waitTime)
-                        print(f'Downloading {self.name} {fileDateFormatted}')                
-                        page = urllib.request.Request(demoUrl,headers={'User-Agent': user_agent}) 
-                        response = urllib.request.urlopen(page)
-                        with open(demoDestFileName, 'wb') as out_file:
-                            shutil.copyfileobj(response,out_file)
-                    except urllib.request.HTTPError as e:
-                        print(e)
-                        break
+            fileDate = re.search(findDate, filename).group(0)
+            fileDateFormatted = datetime.datetime.strptime(fileDate, '%Y_%m_%d_%H_%M_%S').strftime('%Y-%m-%d %H:%M:%S')
+            if fileDateFormatted > lastDemoDate:
+                if fileDateFormatted > newDateToUpdate:
+                    newDateToUpdate = fileDateFormatted
+                demosToDownload.append(filename)
+                
+        if len(demosToDownload) > 0:
+            print(f'Downloading from {self.name}')
+        for demoIndex,demo in enumerate(demosToDownload):
+            update_progress((demoIndex+1), len(demosToDownload))
+            demoDestFileName = str("demos/" + demo)
+            demoUrl = str(self.trackerUrl + demo)
+            try:
+                time.sleep(self.waitTime)
+                page = urllib.request.Request(demoUrl,headers={'User-Agent': user_agent}) 
+                response = urllib.request.urlopen(page)
+                with open(demoDestFileName, 'wb') as out_file:
+                    shutil.copyfileobj(response,out_file)
+            except urllib.request.HTTPError as e:
+                print(e)
+                break
         if newDateToUpdate != '2000-01-01 00:00:00':
             self.updateLatestDemo(newDateToUpdate)
 
-def main():
+def downloadAllDemos():
     Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
     Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
     Server('PRTA', 'https://eu3.prta.co/servers/prbf2/1/tracker/','https://eu3.prta.co/servers/prbf2/1/tracker/')
     Server('DIVSUL', 'http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/','http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/', 'tracker_')
     Server('=HOG=', 'http://br.hogclangaming.com/pr1/','http://br.hogclangaming.com/pr1/','tracker_',1)
-    Server('SSG', 'http://br.ssg-clan.com/?srv=1','http://br.ssg-clan.com/tracker/', 'Tracker')
+    Server('SSG', 'http://br.ssg-clan.com/?srv=1','http://br.ssg-clan.com/tracker/', 'Tracker')    
+
+def main():
+    downloadAllDemos()
 
 if __name__ == '__main__':
     main()
