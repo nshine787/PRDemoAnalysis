@@ -130,7 +130,7 @@ class Server:
         conn.close()
     
     def downloadDemos(self):
-        print(f'Checking {self.name}')
+        # print(f'Checking {self.name}')
         req = requests.get(self.linkUrl, self.headers)
         soup = BeautifulSoup(req.content, 'html.parser')
         tags = soup.find_all('a', text=re.compile(self.searchTerm))
@@ -169,7 +169,7 @@ class Server:
 
 def downloadAllDemos():
     Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
-    # Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
+    Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
     Server('PRTA', 'https://eu3.prta.co/servers/prbf2/1/tracker/','https://eu3.prta.co/servers/prbf2/1/tracker/')
     Server('DIVSUL', 'http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/','http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/', 'tracker_')
     Server('=HOG=', 'http://br.hogclangaming.com/pr1/','http://br.hogclangaming.com/pr1/','tracker_',1)
