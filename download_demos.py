@@ -15,12 +15,13 @@ import sqlite3
 import time
 
 class Server:
-    def __init__(self, name, linkUrl, trackerUrl, searchTerm='',waitTime=0):
+    def __init__(self, name, linkUrl, trackerUrl, searchTerm='',waitTime=0, db_location = 'pr.db'):
         self.name = name
         self.linkUrl = linkUrl
         self.trackerUrl = trackerUrl
         self.searchTerm = searchTerm
         self.waitTime = waitTime
+        self.db_location = db_location
         self.headers = {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET',
@@ -31,14 +32,32 @@ class Server:
         self.downloadDemos()
         
     def getLatestDemo(self):
-        db_location = 'pr.db'
-        conn = sqlite3.connect(db_location)
+        conn = sqlite3.connect(self.db_location)
         c = conn.cursor()
-        c.execute(f"SELECT MAX(date) FROM demos WHERE server LIKE '%{self.name}%';")
+        c.execute('''CREATE TABLE IF NOT EXISTS lastDownload (
+            server TEXT,
+            date DATE,
+            PRIMARY KEY(server)
+            )''')
+        conn.commit()
+        c.execute('SELECT COUNT(*) FROM lastDownload WHERE server ==:serverName',{'serverName':self.name})
+        if c.fetchone()[0] == 0:
+            c.execute('''INSERT INTO lastDownload (server, date)
+                      VALUES(:server,:date)''', {'server':self.name, 'date': '2000-01-01 00:00:00'})
+            conn.commit()
+        c.execute('SELECT date FROM lastDownload WHERE server ==:serverName ', {'serverName':self.name})
         returnDate = c.fetchone()[0]
-        if returnDate is None:
-            returnDate = '2000-00-00 00:00:00'
+        conn.close()
         return returnDate
+    
+    def updateLatestDemo(self, newDate):
+        conn = sqlite3.connect(self.db_location)
+        c = conn.cursor()
+        c.execute('''UPDATE lastDownload
+                  SET date = :newDate
+                  WHERE server = :serverName''', {'newDate': newDate, 'serverName': self.name})
+        conn.commit()
+        conn.close()
     
     def downloadDemos(self):
         req = requests.get(self.linkUrl, self.headers)
@@ -49,12 +68,16 @@ class Server:
         findFileName = re.compile('tracker_\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}.+PRdemo$')
         findDate = re.compile('\d{4}_\d{2}_\d{2}_\d{2}_\d{2}_\d{2}')
         lastDemoDate = self.getLatestDemo()
+        newDateToUpdate = '2000-01-01 00:00:00'
         for tagIndex,tag in enumerate(tags):
             filename = re.search(findFileName, tag['href']).group(0)
             if filename not in demosToDownload:
                 fileDate = re.search(findDate, filename).group(0)
                 fileDateFormatted = datetime.datetime.strptime(fileDate, '%Y_%m_%d_%H_%M_%S').strftime('%Y-%m-%d %H:%M:%S')
                 if fileDateFormatted > lastDemoDate:
+                    if fileDateFormatted > newDateToUpdate:
+                        newDateToUpdate = fileDateFormatted
+                    self.updateLatestDemo(fileDateFormatted)
                     demosToDownload.append(filename)
                     demoDestFileName = str("demos/" + filename)
                     demoUrl = str(self.trackerUrl + filename)
@@ -68,6 +91,8 @@ class Server:
                     except urllib.request.HTTPError as e:
                         print(e)
                         break
+        if newDateToUpdate != '2000-01-01 00:00:00':
+            self.updateLatestDemo(newDateToUpdate)
 
 def main():
     Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
