@@ -59,6 +59,8 @@ class StatsParser:
         
     def parallelParse(self):
         demoLocations = []
+        if not os.path.exists(self.demosLocation):
+            os.makedirs(self.demosLocation)
         for subdir, dirs, files in os.walk(self.demosLocation):
             demoLocations = [os.path.join(subdir,filename) for filename in files]
         start = time.time()
@@ -167,22 +169,24 @@ class Server:
 
 def downloadAllDemos():
     Server('Gamma','http://gammagroup.wtf/br/main/tracker/','http://gammagroup.wtf/br/main/tracker/', '.PRdemo\Z')
-    Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
+    # Server('Free Candy Van', 'http://www.fcv-pr.com/?srv=1','http://www.fcv-pr.com/tracker/', 'Tracker')
     Server('PRTA', 'https://eu3.prta.co/servers/prbf2/1/tracker/','https://eu3.prta.co/servers/prbf2/1/tracker/')
     Server('DIVSUL', 'http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/','http://usaserver.divsul.org:666/PRServer/BattleRecorder/Server01/tracker/', 'tracker_')
     Server('=HOG=', 'http://br.hogclangaming.com/pr1/','http://br.hogclangaming.com/pr1/','tracker_',1)
     Server('SSG', 'http://br.ssg-clan.com/?srv=1','http://br.ssg-clan.com/tracker/', 'Tracker')  
     
 def parseAllDemos():
-    if os.listdir('./demos') == []:
+    demosLocalLocation = './demos'
+    if not os.path.exists(demosLocalLocation):
+            os.makedirs(demosLocalLocation)
+    if os.listdir(demosLocalLocation) == []:
         print('No new demos to parse')
         return
     else:
         print('Parsing demos')
-        demosLocation = './demos'
         db_location = 'pr.db'
         
-        sp = StatsParser(demosLocation, db_location)
+        sp = StatsParser(demosLocalLocation, db_location)
         
         conn = sqlite3.connect(db_location)
         c = conn.cursor()
