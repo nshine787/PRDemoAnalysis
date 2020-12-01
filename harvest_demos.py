@@ -131,7 +131,11 @@ class Server:
     
     def downloadDemos(self):
         # print(f'Checking {self.name}')
-        req = requests.get(self.linkUrl, self.headers)
+        try:
+            req = requests.get(self.linkUrl, self.headers)
+        except:
+            print(f'Failed to access {self.name}')
+            return
         soup = BeautifulSoup(req.content, 'html.parser')
         tags = soup.find_all('a', text=re.compile(self.searchTerm))
         user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
@@ -150,7 +154,9 @@ class Server:
                 demosToDownload.append(filename)
                 
         if len(demosToDownload) > 0:
-            print(f'Downloading from {self.name}')
+            print(f'\nDownloading from {self.name}')
+        else:
+            print(f'No new demos detected from {self.name}')
         for demoIndex,demo in enumerate(demosToDownload):
             update_progress((demoIndex+1), len(demosToDownload))
             demoDestFileName = str("demos/" + demo)

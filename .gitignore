@@ -1,4 +1,9 @@
+venv
+*.pyc
+.env
+.DS_Store
 __pycache__/
+app_venv/
 *.log
 # Jupyter Notebook
 .ipynb_checkpoints
