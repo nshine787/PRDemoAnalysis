@@ -1,0 +1,263 @@
+map,mode,layer,team1,team2,startingTickets1,startingTickets2,version
+adak,Advance & Secure,Large,PLA,US Army,600,690,v1.6.4
+adak,Advance & Secure,Standard,PLA,US Army,600,600,v1.6.4
+albasrah_2,Insurgency,Alternative,Insurgents,BAF,4,650,v1.6.3
+albasrah_2,Insurgency,Infantry,Insurgents,BAF,4,650,v1.6.3
+albasrah_2,Insurgency,Standard,Insurgents,BAF,4,650,v1.6.3
+asad_khal,Advance & Secure,Alternative,MEC,IDF,600,600,v1.6.3
+asad_khal,Advance & Secure,Standard,Hamas,IDF,650,650,v1.6.3
+assault_on_grozny,Advance & Secure,Alternative,Militia,Russia,750,750,v1.6.3
+assault_on_grozny,Advance & Secure,Infantry,Militia,Russia,400,400,v1.6.3
+assault_on_grozny,Advance & Secure,Standard,Militia,Russia,750,750,v1.6.3
+assault_on_grozny,Insurgency,Standard,Militia,Russia,4,700,v1.6.3
+assault_on_grozny,Skirmish,Alternative,Militia,Russia,750,750,v1.6.3
+assault_on_mestia,Advance & Secure,Infantry,Militia,USMC,500,500,v1.5.5
+assault_on_mestia,Advance & Secure,Standard,Militia,USMC,500,500,v1.6.3
+bamyan,Advance & Secure,Alternative,Taliban,USMC,850,750,v1.6.3
+bamyan,Advance & Secure,Large,Taliban,USMC,1200,900,v1.6.3
+bamyan,Advance & Secure,Standard,MEC,USMC,750,700,v1.6.3
+bamyan,Insurgency,Standard,Taliban,USMC,4,600,v1.6.3
+battle_of_ia_drang,Advance & Secure,Alternative,NVA,US Army Vietnam,550,550,v1.6.3
+battle_of_ia_drang,Advance & Secure,Infantry,NVA,US Army Vietnam,550,550,v1.6.3
+battle_of_ia_drang,Advance & Secure,Standard,NVA,US Army Vietnam,550,550,v1.6.3
+battle_of_ia_drang,Command & Control,Standard,NVA,US Army Vietnam,550,550,v1.6.3
+beirut,Advance & Secure,Alternative,Russia,IDF,750,750,v1.5.5
+beirut,Advance & Secure,Infantry,Russia,IDF,550,550,v1.6.3
+beirut,Advance & Secure,Large,Russia,IDF,1000,1000,v1.5.5
+beirut,Advance & Secure,Standard,Russia,IDF,700,700,v1.6.3
+beirut,Skirmish,Infantry,Russia,IDF,550,550,v1.6.3
+bijar_canyons,Advance & Secure,Alternative,MEC,IDF,650,650,v1.6.3
+bijar_canyons,Advance & Secure,Infantry,MEC,IDF,450,450,v1.6.3
+bijar_canyons,Advance & Secure,Standard,MEC,Dutch,650,650,v1.6.4
+bijar_canyons,Advance & Secure,Standard,MEC,IDF,650,650,v1.6.3
+bijar_canyons,Command & Control,Standard,MEC,IDF,650,650,v1.6.3
+bijar_canyons,Command & Control,Alternative,MEC,IDF,650,650,v1.6.3
+bijar_canyons,Command & Control,Infantry,MEC,IDF,450,450,v1.6.3
+bijar_canyons,Insurgency,Standard,MEC,IDF,4,500,v1.6.3
+black_gold,Advance & Secure,Alternative,Russia,PLA,650,650,v1.6.3
+black_gold,Advance & Secure,Infantry,Russia,PLA,450,450,v1.6.3
+black_gold,Advance & Secure,Large,Russia,PLA,950,950,v1.6.3
+black_gold,Advance & Secure,Standard,Russia,PLA,650,650,v1.6.3
+black_gold,Command & Control,Standard,Russia,PLA,650,650,v1.6.3
+black_gold,Insurgency,Standard,Militia,PLA,3,600,v1.6.3
+black_gold,Vehicle Warfare,Infantry,Russia,PLA,1000,1000,v1.6.3
+brecourt_assault,Advance & Secure,Alternative,Wermacht,US Army WWII,700,700,v1.6.3
+brecourt_assault,Advance & Secure,Standard,Wermacht,US Army WWII,700,700,v1.6.3
+burning_sands,Advance & Secure,Alternative,MEC,BAF,600,600,v1.6.3
+burning_sands,Advance & Secure,Infantry,MEC,BAF,500,500,v1.6.3
+burning_sands,Advance & Secure,Large,MEC,BAF,1000,1000,v1.5.5
+burning_sands,Advance & Secure,Large,MEC,Germany,750,750,v1.6.4
+burning_sands,Advance & Secure,Standard,MEC,BAF,750,750,v1.6.3
+carentan,Advance & Secure,Alternative,Wermacht,US Army WWII,900,800,v1.6.3
+carentan,Advance & Secure,Large,Wermacht,US Army WWII,900,900,v1.6.3
+carentan,Advance & Secure,Standard,Wermacht,US Army WWII,800,900,v1.6.3
+carentan,Skirmish,Alternative,Wermacht,US Army WWII,900,800,v1.6.3
+carentan,Skirmish,Infantry,Wermacht,US Army WWII,150,150,v1.6.3
+charlies_point,Advance & Secure,Standard,NVA,USMC Vietnam,500,550,v1.6.3
+dovre,Advance & Secure,Alternative,Russia,Netherlands,700,700,v1.6.3
+dovre,Advance & Secure,Infantry,Russia,Netherlands,500,500,v1.6.3
+dovre,Advance & Secure,Standard,Russia,Netherlands,700,700,v1.6.3
+dovre_winter,Advance & Secure,Alternative,Russia,Germany,700,700,v1.6.3
+dovre_winter,Advance & Secure,Standard,Russia,Germany,700,700,v1.6.3
+dragon_fly,Advance & Secure,Alternative,Militia,BAF,550,550,v1.6.3
+dragon_fly,Advance & Secure,Infantry,Militia,BAF,500,500,v1.6.3
+dragon_fly,Advance & Secure,Standard,Militia,BAF,600,550,v1.6.3
+dragon_fly,Insurgency,Infantry,Militia,BAF,2,500,v1.6.3
+dragon_fly,Insurgency,Standard,Militia,BAF,3,600,v1.6.3
+fallujah_west,Advance & Secure,Standard,MEC,USMC,500,500,v1.6.3
+fallujah_west,Insurgency,Alternative,Insurgents,USMC,4,550,v1.6.3
+fallujah_west,Insurgency,Infantry,Insurgents,USMC,3,450,v1.6.3
+fallujah_west,Insurgency,Large,Insurgents,MEC,4,550,v1.6.4
+fallujah_west,Insurgency,Standard,Insurgents,USMC,4,550,v1.6.3
+fallujah_west,Skirmish,Infantry,MEC,USMC,,,v1.6.3
+fools_road,Advance & Secure,Alternative,Militia,BAF,650,650,v1.6.3
+fools_road,Advance & Secure,Alternative,Militia,BAF 1982,650,600,v1.6.4
+fools_road,Advance & Secure,Infantry,Militia,BAF,550,550,v1.6.3
+fools_road,Advance & Secure,Large,Russia,BAF,600,600,v1.6.4
+fools_road,Advance & Secure,Standard,Militia,BAF,650,600,v1.6.3
+gaza_2,Advance & Secure,Alternative,MEC,IDF,700,700,v1.6.3
+gaza_2,Advance & Secure,Infantry,Hamas,IDF,500,500,v1.6.3
+gaza_2,Advance & Secure,Standard,Hamas,IDF,700,700,v1.6.3
+gaza_2,Insurgency,Infantry,Hamas,IDF,3,600,v1.6.3
+gaza_2,Insurgency,Standard,Hamas,IDF,4,800,v1.6.3
+gaza_2,Skirmish,Infantry,Hamas,IDF,500,500,v1.6.3
+goose_green,Advance & Secure,Alternative,Argentina,BAF 1982,500,550,v1.6.3
+goose_green,Advance & Secure,Infantry,Argentina,BAF 1982,400,450,v1.6.3
+goose_green,Advance & Secure,Standard,Argentina,BAF 1982,500,550,v1.6.3
+hades_peak,Advance & Secure,Alternative,Russia,BAF,650,650,v1.6.3
+hades_peak,Advance & Secure,Large,Russia,US Army,650,650,v1.6.4
+hades_peak,Advance & Secure,Standard,Russia,BAF,650,650,v1.6.3
+hades_peak,Advance & Secure,Infantry,Russia,BAF,450,450,v1.6.3
+hiberna,Advance & Secure,Alternative,Russia,BAF,500,500,v1.6.4
+hiberna,Advance & Secure,Infantry,PLA,Germany,500,500,v1.6.4
+hiberna,Advance & Secure,Standard,PLA,Germany,500,500,v1.6.4
+hiberna,Advance & Secure,Standard,PLA,Netherlands,500,500,v1.6.4
+hill_488,Advance & Secure,Infantry,NVA,US Army Vietnam,350,400,v1.5.5
+hill_488,Advance & Secure,Standard,NVA,US Army Vietnam,600,600,v1.6.3
+icebound,Advance & Secure,Alternative,PLA,Russia,500,500,v1.6.4
+icebound,Advance & Secure,Infantry,PLA,US Army,500,500,v1.6.4
+icebound,Advance & Secure,Large,PLA,BAF,500,500,v1.6.4
+icebound,Advance & Secure,Standard,PLA,US Army,500,500,v1.6.4
+iron_ridge,Advance & Secure,Alternative,Militia,Poland,550,500,v1.6.3
+iron_ridge,Advance & Secure,Infantry,Russia,Poland,400,400,v1.6.3
+iron_ridge,Advance & Secure,Standard,Russia,Poland,600,600,v1.6.3
+iron_ridge,Insurgency,Standard,Militia,Poland,4,600,v1.6.3
+iron_thunder,Advance & Secure,Alternative,Russia,Poland,700,700,v1.6.3
+iron_thunder,Advance & Secure,Standard,Russia,Poland,700,700,v1.6.3
+jabal,Advance & Secure,Alternative,FSA,USMC,550,550,v1.6.3
+jabal,Advance & Secure,Infantry,MEC,USMC,500,500,v1.6.3
+jabal,Advance & Secure,Standard,MEC,USMC,550,550,v1.6.3
+kafar_halab,Advance & Secure,Alternative,MEC,Russia,600,600,v1.6.3
+kafar_halab,Advance & Secure,Infantry,FSA,Russia,520,400,v1.6.3
+kafar_halab,Advance & Secure,Standard,FSA,Russia,720,600,v1.6.3
+kafar_halab,Insurgency,Standard,FSA,Russia,6,600,v1.6.3
+karbala,Insurgency,Alternative,Insurgents,Poland,4,500,v1.6.3
+karbala,Insurgency,Infantry,Insurgents,Poland,5,500,v1.6.3
+karbala,Insurgency,Large,Insurgents,Poland,5,500,v1.6.3
+karbala,Insurgency,Standard,Insurgents,Poland,5,500,v1.6.3
+kashan_desert,Advance & Secure,Alternative,MEC,Canada,750,750,v1.6.3
+kashan_desert,Advance & Secure,Large,MEC,USMC,750,750,v1.6.3
+kashan_desert,Advance & Secure,Standard,MEC,US Army,750,750,v1.6.3
+kashan_desert,Command & Control,Infantry,MEC,Canada,500,500,v1.6.3
+khamisiyah,Advance & Secure,Alternative,MEC,US Army,700,700,v1.6.3
+khamisiyah,Advance & Secure,Infantry,MEC,US Army,500,500,v1.6.3
+khamisiyah,Advance & Secure,Large,MEC,US Army,700,700,v1.6.3
+khamisiyah,Advance & Secure,Standard,MEC,USMC,700,700,v1.6.3
+khamisiyah,Command & Control,Alternative,MEC,US Army,700,700,v1.6.3
+khamisiyah,Command & Control,Standard,MEC,USMC,700,700,v1.6.3
+khamisiyah,Insurgency,Standard,MEC,US Army,5,700,v1.6.3
+kokan,Insurgency,Alternative,Taliban,Canada,4,550,v1.6.3
+kokan,Insurgency,Infantry,Taliban,USMC,3,450,v1.6.3
+kokan,Insurgency,Standard,Taliban,US Army,4,600,v1.6.3
+korengal,Advance & Secure,Standard,Taliban,US Army,600,600,v1.6.3
+korengal,Insurgency,Standard,Taliban,US Army,3,650,v1.6.3
+kozelsk,Advance & Secure,Alternative,Militia,Russia,600,600,v1.6.3
+kozelsk,Advance & Secure,Infantry,Militia,Russia,600,600,v1.6.3
+kozelsk,Advance & Secure,Standard,Militia,Russia,600,600,v1.6.3
+kozelsk,Insurgency,Standard,Militia,Russia,5,650,v1.6.3
+lashkar_valley,Insurgency,Alternative,Taliban,Russia,4,650,v1.6.4
+lashkar_valley,Insurgency,Infantry,Taliban,Germany,3,600,v1.6.3
+lashkar_valley,Insurgency,Standard,Taliban,Germany,4,650,v1.6.3
+masirah,Advance & Secure,Standard,MEC,France,700,700,v1.6.3
+merville,Advance & Secure,Alternative,Wermacht,US Army WWII,550,650,v1.6.3
+merville,Advance & Secure,Alternative,Wermacht,US Army WWII,400,450,v1.6.3
+merville,Advance & Secure,Standard,Wermacht,US Army WWII,500,600,v1.6.3
+musa_qala,Advance & Secure,Standard,Taliban,BAF,650,450,v1.6.3
+musa_qala,Insurgency,Alternative,Taliban,USMC,5,500,v1.6.3
+musa_qala,Insurgency,Infantry,Taliban,BAF,5,500,v1.6.3
+musa_qala,Insurgency,Standard,Taliban,BAF,5,500,v1.6.3
+muttrah_city_2,Advance & Secure,Alternative,MEC,USMC,550,550,v1.6.3
+muttrah_city_2,Advance & Secure,Infantry,MEC,USMC,500,500,v1.6.3
+muttrah_city_2,Advance & Secure,Standard,MEC,USMC,750,750,v1.6.3
+muttrah_city_2,Skirmish,Infantry,MEC,USMC,,,v1.6.3
+nuijamaa,Advance & Secure,Alternative,Russia,France,550,550,v1.6.3
+nuijamaa,Advance & Secure,Infantry,Russia,France,550,550,v1.6.3
+nuijamaa,Advance & Secure,Standard,Russia,France,550,550,v1.6.3
+nuijamaa,Skirmish,Infantry,Russia,France,,,v1.6.3
+omaha_beach,Advance & Secure,Alternative,Wermacht,US Army WWII,700,800,v1.6.3
+omaha_beach,Advance & Secure,Infantry,Wermacht,US Army WWII,550,650,v1.6.3
+omaha_beach,Advance & Secure,Large,Wermacht,US Army WWII,600,600,v1.6.3
+omaha_beach,Advance & Secure,Standard,Wermacht,US Army WWII,800,900,v1.6.3
+omaha_beach,Skirmish,Infantry,Wermacht,US Army WWII,,,v1.6.3
+op_barracuda,Advance & Secure,Alternative,NVA,USMC Vietnam,600,600,v1.6.3
+op_barracuda,Advance & Secure,Infantry,PLA,USMC,500,500,v1.6.3
+op_barracuda,Advance & Secure,Standard,PLA,USMC,600,600,v1.6.3
+operation_archer,Insurgency,Alternative,Taliban,USMC,5,500,v1.6.3
+operation_archer,Insurgency,Infantry,Taliban,Canada,5,500,v1.6.3
+operation_archer,Insurgency,Standard,Taliban,Canada,5,550,v1.6.3
+operation_falcon,Advance & Secure,Alternative,Militia,Netherlands,700,600,v1.6.3
+operation_falcon,Advance & Secure,Infantry,Russia,Netherlands,500,500,v1.6.3
+operation_falcon,Advance & Secure,Large,Russia,Netherlands,650,650,v1.6.3
+operation_falcon,Advance & Secure,Standard,Russia,Netherlands,650,650,v1.6.3
+operation_ghost_train,Advance & Secure,Standard,PLA,BAF,400,400,v1.6.3
+operation_ghost_train,Advance & Secure,Infantry,PLA,BAF,350,350,v1.6.3
+operation_marlin,Advance & Secure,Alternative,MEC,France,550,550,v1.6.3
+operation_marlin,Advance & Secure,Alternative,MEC,Canada,550,550,v1.6.4
+operation_marlin,Advance & Secure,Infantry,Hamas,France,500,400,v1.6.3
+operation_marlin,Advance & Secure,Large,MEC,IDF,550,550,v1.6.4
+operation_marlin,Advance & Secure,Standard,MEC,France,550,550,v1.6.3
+operation_marlin,Insurgency,Standard,Hamas,France,4,650,v1.6.3
+operation_soul_rebel,Advance & Secure,Infantry,Russia,BAF,500,500,v1.6.3
+operation_soul_rebel,Advance & Secure,Standard,Russia,BAF,750,750,v1.6.3
+operation_soul_rebel,Vehicle Warfare,Standard,Russia,BAF,1000,1000,v1.6.3
+outpost,Advance & Secure,Alternative,Taliban,Poland,600,550,v1.6.3
+outpost,Advance & Secure,Standard,MEC,Poland,500,500,v1.6.3
+outpost,Insurgency,Standard,Taliban,Poland,5,600,v1.6.3
+pavlovsk_bay,Advance & Secure,Alternative,Militia,USMC,700,700,v1.6.3
+pavlovsk_bay,Advance & Secure,Infantry,Russia,USMC,500,500,v1.6.3
+pavlovsk_bay,Advance & Secure,Standard,Russia,USMC,700,700,v1.6.3
+qwai1,Advance & Secure,Alternative,PLA,Canada,500,500,v1.6.3
+qwai1,Advance & Secure,Infantry,PLA,US Army,400,400,v1.6.3
+qwai1,Advance & Secure,Standard,PLA,US Army,600,600,v1.6.3
+ramiel,Advance & Secure,Standard,ARF,US Army,800,1000,v1.6.3
+ramiel,Insurgency,Alternative,ARF,USMC,6,700,v1.6.3
+ramiel,Insurgency,Infantry,ARF,US Army,4,650,v1.6.3
+ramiel,Insurgency,Standard,ARF,US Army,5,650,v1.6.3
+ramiel,Skirmish,Infantry,ARF,US Army,,,v1.6.3
+ras_el_masri_2,Advance & Secure,Standard,IDF,PLA,650,650,v1.6.3
+ras_el_masri_2,Insurgency,Standard,Hamas,PLA,600,600,v1.6.3
+reichswald,Advance & Secure,Alternative,Wermacht,US Army WWII,750,800,v1.6.3
+reichswald,Advance & Secure,Infantry,Wermacht,US Army WWII,700,750,v1.6.3
+reichswald,Advance & Secure,Standard,Wermacht,US Army WWII,850,850,v1.6.3
+route,Advance & Secure,Alternative,Russia,US Army,600,600,v1.6.4
+route,Advance & Secure,Infantry,Russia,Netherlands,600,600,v1.6.3
+route,Advance & Secure,Large,Russia,BAF,600,600,v1.6.4
+route,Advance & Secure,Standard,Russia,Netherlands,600,600,v1.6.3
+saaremaa,Advance & Secure,Alternative,Russia,USMC,600,600,v1.6.3
+saaremaa,Advance & Secure,Infantry,Russia,USMC,400,400,v1.6.3
+saaremaa,Advance & Secure,Large,Russia,USMC,650,650,v1.6.3
+saaremaa,Advance & Secure,Standard,Russia,USMC,650,650,v1.6.3
+sahel,Advance & Secure,Alternative,PLA,France,600,600,v1.6.4
+sahel,Advance & Secure,Alternative,ARF,France,600,600,v1.6.3
+sahel,Advance & Secure,Infantry,ARF,France,400,400,v1.6.3
+sahel,Advance & Secure,Standard,ARF,France,720,600,v1.6.3
+sahel,Insurgency,Standard,ARF,France,720,600,v1.6.3
+sbeneh_outskirts,Advance & Secure,Alternative,FSA,MEC,600,600,v1.6.3
+sbeneh_outskirts,Advance & Secure,Infantry,FSA,MEC,550,550,v1.6.3
+sbeneh_outskirts,Advance & Secure,Standard,FSA,MEC,750,700,v1.6.3
+sbeneh_outskirts,Command & Control,Standard,FSA,MEC,750,700,v1.6.3
+sbeneh_outskirts,Insurgency,Alternative,FSA,MEC,4,600,v1.6.3
+sbeneh_outskirts,Insurgency,Infantry,FSA,MEC,3,550,v1.6.3
+sbeneh_outskirts,Insurgency,Standard,FSA,MEC,3,700,v1.6.3
+sbeneh_outskirts,Skirmish,Infantry,FSA,MEC,,,v1.6.3
+shahadah,Advance & Secure,Standard,MEC,Poland,500,500,v1.6.3
+shahadah,Insurgency,Standard,Insurgents,Poland,4,500,v1.6.3
+shijiavalley,Advance & Secure,Alternative,PLA,BAF,550,550,v1.6.3
+shijiavalley,Advance & Secure,Infantry,PLA,BAF,400,400,v1.6.3
+shijiavalley,Advance & Secure,Large,PLA,Canada,650,650,v1.6.4
+shijiavalley,Advance & Secure,Standard,PLA,BAF,650,650,v1.6.3
+shijiavalley,Skirmish,Infantry,PLA,BAF,,,v1.6.3
+silent_eagle,Advance & Secure,Alternative,Russia,Germany,600,600,v1.6.3
+silent_eagle,Advance & Secure,Infantry,Russia,Germany,500,500,v1.6.3
+silent_eagle,Advance & Secure,Large,Russia,Germany,900,900,v1.6.3
+silent_eagle,Advance & Secure,Standard,Russia,Germany,600,600,v1.6.3
+tad_sae,Advance & Secure,Alternative,NVA,US Army Vietnam,500,500,v1.6.3
+tad_sae,Advance & Secure,Infantry,PLA,USMC,500,500,v1.6.3
+tad_sae,Advance & Secure,Standard,PLA,USMC,500,500,v1.6.3
+the_falklands,Advance & Secure,Alternative,Argentina,BAF 1982,1000,1000,v1.6.3
+the_falklands,Advance & Secure,Infantry,Argentina,BAF 1982,600,600,v1.6.3
+the_falklands,Advance & Secure,Standard,Argentina,BAF 1982,1000,1000,v1.6.3
+the_falklands,Vehicle Warfare,Alternative,Argentina,BAF 1982,1000,1000,v1.6.3
+the_falklands,Vehicle Warfare,Standard,Argentina,BAF 1982,1000,1000,v1.6.3
+ulyanovsk,Advance & Secure,Alternative,Militia,Germany,600,600,v1.6.3
+ulyanovsk,Advance & Secure,Infantry,Russia,Germany,500,450,v1.6.3
+ulyanovsk,Advance & Secure,Large,Russia,Germany,900,900,v1.6.3
+ulyanovsk,Advance & Secure,Standard,Russia,Germany,600,600,v1.6.3
+vadso_city,Advance & Secure,Alternative,Russia,BAF,600,600,v1.6.3
+vadso_city,Advance & Secure,Alternative,Russia,US Army,600,600,v1.6.4
+vadso_city,Advance & Secure,Standard,Russia,BAF,600,600,v1.6.3
+vadso_city,Advance & Secure,Infantry,Russia,BAF,400,400,v1.6.3
+wanda_shan,Advance & Secure,Alternative,PLA,Germany,500,500,v1.6.3
+wanda_shan,Advance & Secure,Alternative,PLA,US Army,500,500,v1.6.4
+wanda_shan,Advance & Secure,Infantry,PLA,Germany,400,400,v1.6.3
+wanda_shan,Advance & Secure,Large,PLA,Netherlands,500,500,v1.6.4
+wanda_shan,Advance & Secure,Standard,PLA,Germany,500,500,v1.6.3
+wanda_shan,Command & Control,Standard,PLA,Germany,500,500,v1.6.3
+xiangshan,Advance & Secure,Alternative,PLA,France,650,650,v1.6.3
+xiangshan,Advance & Secure,Infantry,PLA,France,500,500,v1.6.3
+xiangshan,Advance & Secure,Standard,PLA,France,650,650,v1.6.3
+yamalia,Advance & Secure,Alternative,Russia,US Army,600,600,v1.6.3
+yamalia,Advance & Secure,Infantry,Russia,Canada,500,500,v1.6.3
+yamalia,Advance & Secure,Large,Russia,Netherlands,600,600,v1.6.4
+yamalia,Advance & Secure,Standard,Russia,Canada,600,600,v1.6.3
+yamalia,Command & Control,Infantry,Russia,Canada,500,500,v1.6.3

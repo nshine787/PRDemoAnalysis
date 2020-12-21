@@ -60,6 +60,8 @@ def readData(dbLocation, minPlayers = 50, ticketWinThreshold = 20):
     
     
     mapTeams = pd.read_csv('map_modes_tickets.csv')
+    # mapTeams = pd.read_csv('map_modes_tickets2.csv')
+    # mapTeams = mapTeams.drop('version',axis=1)
     mapTeams.dropna(inplace=True)
     mapTeams['startingTickets1'] = mapTeams['startingTickets1'].astype(int)
     mapTeams['startingTickets2'] = mapTeams['startingTickets2'].astype(int)
@@ -118,7 +120,7 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
-all_df = readData('pr.db')
+all_df = readData('pr.db', minPlayers=75)
 df = all_df
 unformattedMapNames = np.sort(df['map'].unique())
 formattedMapNames = [formatMapName(mapName) for mapName in unformattedMapNames]
